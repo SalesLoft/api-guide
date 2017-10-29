@@ -10,6 +10,10 @@ https://developers.salesloft.com.
 Each guide will walk through common concepts and patterns for using the SalesLoft API. They are
 small chunks of functionality that will run locally.
 
+* [Ruby person poller](https://github.com/SalesLoft/api-guide/tree/master/ruby-person-poller) -
+  This guide will walk through creating an efficient poller using the SalesLoft API that detects and
+  triggers any time a person changes.
+
 ## How do I get started?
 
 Create an App at https://accounts.salesloft.com and follow these guides or the developer documentation
