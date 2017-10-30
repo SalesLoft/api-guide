@@ -7,6 +7,7 @@ require "active_support/all"
 # Polls a given resource, keeping track of the last processed item to continue the processing
 class SalesLoftPoller
   API_BASE = "https://api.salesloft.com/v2"
+  PAGE_SIZE = 2 # Demonstrate how to process pages in the chance of more than 100 in a response
 
   def initialize(resource)
     @cursor = Time.now.utc
@@ -14,15 +15,18 @@ class SalesLoftPoller
   end
 
   def process_page(&block)
-    data = HTTParty.get(url, headers: headers)["data"]
+    response = HTTParty.get(url, headers: headers)
+    raise StandardError.new(response.parsed_response) unless response.success?
+    data = response["data"]
     data.each(&block)
     @cursor = Time.parse(data.last["updated_at"]) unless data.last.nil?
+    return process_page(&block) if data.count == PAGE_SIZE
   end
 
   private
 
   def url
-    "#{API_BASE}/#{@resource}?per_page=100&sort=updated_at&sort_direction=ASC&updated_at[gt]=#{@cursor.iso8601(6)}"
+    "#{API_BASE}/#{@resource}?per_page=#{PAGE_SIZE}&sort=updated_at&sort_direction=ASC&updated_at[gt]=#{@cursor.iso8601(6)}"
   end
 
   def headers
