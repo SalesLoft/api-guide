@@ -36,5 +36,7 @@ A key part of this code is the processing of a page from the API. When a page is
 If you're looking to implement a poller in production, there are a few things you'll want to do. At a minimum:
 
 * Persist the cursor in a data store
+* Use a page size of 100 for fewer API calls
 * Keep track of the last processed state for records so that records are not double processed. This can be done by creating an MD5 hash signature of the fields that you care about
 * Utilize refresh tokens in order to never have your poller break
+* Handle rate limiting and bursting of the API reasonably
