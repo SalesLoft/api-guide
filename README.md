@@ -1,20 +1,23 @@
 # SalesLoft Guides
 
-SalesLoft API provides an easy REST-ful way to programmatically interact with your SalesLoft
-instance data. After using OAuth 2.0 to authorize an account, the REST API is accessed over
-HTTP to push and pull data from SalesLoft. The SalesLoft API is documented at
-https://developers.salesloft.com.
+The SalesLoft API provides a REST-ful way to programmatically interact with a SalesLoft instance's data.
 
+[Manage SalesLoft API Keys and Oauth Applications](https://accounts.salesloft.com/oauth/applications)
+
+[SalesLoft API Documentation](https://developers.salesloft.com).
 ## Guides
 
-Each guide will walk through common concepts and patterns for using the SalesLoft API. They are
-small chunks of functionality that will run locally.
+Guides are small chunks of functionality that run locally. Each guide walks through a common pattern for using the SalesLoft API.
 
 * [Ruby person poller](https://github.com/SalesLoft/api-guide/tree/master/ruby-person-poller) -
-  This guide will walk through creating an efficient poller using the SalesLoft API that detects and
-  triggers any time a person changes.
+  This guide demonstrates building an `updated_at` poller that triggers any time a person changes.
 
-## How do I get started?
+## Getting Started
 
-Create an App at https://accounts.salesloft.com and follow these guides or the developer documentation
-to get started. Please email [support@salesloft.com](mailto:support@salesloft.com) with any questions you have.
+Sign into your existing SalesLoft account or contact [support@salesloft.com](mailto:support@salesloft.com) to get a developer account
+
+Create an [API Key](https://accounts.salesloft.com/oauth/applications) or [Oauth Application](https://accounts.salesloft.com/oauth/applications)
+
+## Questions?
+
+Please email [support@salesloft.com](mailto:support@salesloft.com) with any questions.
