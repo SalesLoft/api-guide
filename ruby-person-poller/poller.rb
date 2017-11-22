@@ -1,6 +1,7 @@
 # Setup
 require "rubygems"
 require "bundler/setup"
+require "json"
 Bundler.require
 require "active_support/all"
 
@@ -38,14 +39,16 @@ end
 
 poller = SalesLoftPoller.new("people")
 
-puts "Starting 6s poller for 120s, ctrl+c to kill..."
+puts "Starting 6s poller for 120 times, ctrl+c to kill..."
 
 120.times do |i|
   poller.process_page do |record|
     updated_at = Time.parse(record["updated_at"])
     p "Got a record updated_at=#{updated_at.iso8601(6)} difference=#{Time.now - updated_at}s"
+    puts JSON.pretty_generate(record)
   end
 
+  puts "starting sleep number #{i + 1}..."
   sleep 6
-  puts "sleep #{i}..."
+  puts "Polling SalesLoft"
 end
