@@ -10,7 +10,11 @@ The SalesLoft API provides a REST-ful way to programmatically interact with a Sa
 Guides are small chunks of functionality that run locally. Each guide walks through a common pattern for using the SalesLoft API.
 
 * [Ruby person poller](https://github.com/SalesLoft/api-guide/tree/master/ruby-person-poller) -
-  This guide demonstrates building an `updated_at` poller that triggers any time a person changes.
+  This guide will walk through creating an efficient updated_at poller using the SalesLoft API that detects and
+  triggers any time a person changes.
+* [PHP web form](https://github.com/SalesLoft/api-guide/tree/master/php-web-form) -
+  This guide will walk through hooking up your web form to SalesLoft. You will end up with a form
+  that can create a person in SalesLoft, and then add that person to a pre-determined cadence.
 
 ## Getting Started
 
