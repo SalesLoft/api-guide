@@ -3,11 +3,11 @@
 Marketing sites have long been using PHP to serve up content and process web forms. An important
 part of a marketing site is taking these inbound leads and placing them in CRMs or tools to be
 acted on quickly. The SalesLoft API allows your team to place your web leads in
-SalesLoft as people, and even add them to a cadence to be handled quickly.
+SalesLoft as people, adding them to a cadence to be handled quickly.
 
 ## PHP Handler
 
-index.php provides a very barebones web handler. The web form (index.php) will submit the first name,
+index.php provides a barebones web handler. The web form (index.php) will submit the first name,
 last name, and email address of the lead. The lead is then processed through the handler, creating a
 person in SalesLoft and then adding that person to a cadence.
 
@@ -36,7 +36,7 @@ These requests have a few things going on for them that you'll need to make sure
 
 ## Additional Ideas
 
-You really could do a lot with your web forms + SalesLoft integrated together. Projects like
-round-robin inbound leads, web form -> SFDC lead / contact, or even just a simple submission
-are all possible. If you have a use case but don't know how you would achieve it, please feel free
-to reach out to our support team who can help with your request.
+Web forms + SalesLoft can be a powerful tool for your inbound process, including things like
+round-robin inbound leads, web form -> SFDC lead / contact, or even just a simple submission.
+If you have an idea but don't know how you would achieve it, please contact support
+at [support@salesloft.com](mailto:support@salesloft.com).
