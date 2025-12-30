@@ -6,13 +6,19 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    bigdecimal (3.3.1)
     concurrent-ruby (1.0.5)
-    httparty (0.15.6)
+    csv (3.3.5)
+    httparty (0.24.0)
+      csv
+      mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     i18n (0.9.0)
       concurrent-ruby (~> 1.0)
+    mini_mime (1.1.5)
     minitest (5.10.3)
-    multi_xml (0.6.0)
+    multi_xml (0.7.1)
+      bigdecimal (~> 3.1)
     thread_safe (0.3.6)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
@@ -22,7 +28,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
-  httparty
+  httparty (>= 0.24.0)
 
 BUNDLED WITH
-   1.15.4
+   2.3.27
