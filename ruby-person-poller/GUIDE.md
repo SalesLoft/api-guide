@@ -15,7 +15,7 @@ Cursor based polling allows a system to request the changes since the last point
 * An `updated_at` `ASC` sort
 * A `cursor` consisting of the updated_at timestamp of the last received item
 
-By making a request with the params `?sort=updated_at&sort_direction=ASC&updated_at[gt]=2017-10-29T18:48:16.942022Z&per_page=100`, up to 100 items that have been updated since the provided time will be returned. These items are then processed, and the cursor is updated to the first items updated_at value. The cursor format should be iso8601 with microseconds for the highest available accuracy.
+By making a request with the params `?sort=updated_at&sort_direction=ASC&updated_at[gt]=2017-10-29T18:48:16.942022Z&per_page=100`, up to 100 items that have been updated since the provided time will be returned. These items are then processed, and the cursor is updated to the last item's updated_at value. The cursor format should be iso8601 with microseconds for the highest available accuracy.
 
 ## Let's Look at a Ruby Poller
 
